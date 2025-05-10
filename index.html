@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlinsburgTech - Global AI Integration Experts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.svg" alt="Plinsburg">
+            </div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#technologies">Technologies</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="button">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Transform Your Business with AI</h1>
+        <p>We help companies seamlessly integrate and adapt artificial intelligence to increase efficiency and drive innovation.</p>
+        <a href="#contact" class="button">Get Started</a>
+        <a href="#technologies" class="button">Our Technologies</a>
+    </section>
+
+    <section class="section" id="projects">
+        <h2>Our Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>📝 AI Transcription Bot</h3>
+                <p>Automated speech-to-text transcription system with high accuracy and multilingual support. Perfect for meetings, lectures, and content creation.</p>
+                <a href="https://t.me/chattntbot" class="button project-link" target="_blank">Try Bot on Telegram</a>
+            </div>
+            <div class="card">
+                <h3>📊 FactFrame Solution</h3>
+                <p>DocumentAI is a cutting-edge service that leverages artificial intelligence to analyze, extract, and organize key information from various document types with exceptional accuracy.</p>
+                <a href="https://factframe.tech" class="button project-link" target="_blank">View Project</a>
+            </div>
+            <div class="card">
+                <h3>🧠 Psychology Assistant Bot</h3>
+                <p>AI-powered tool for therapists which can transcribe and sumarize sessions.</p>
+                <a href="https://t.me/TherapyFlowBot" class="button project-link" target="_blank">Try Bot on Telegram</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>AI Implementation</h3>
+                <p>Full-cycle AI solution development and implementation tailored to your business needs.</p>
+            </div>
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Process Optimization</h3>
+                <p>Analyze and optimize your workflows using AI to increase operational efficiency.</p>
+            </div>
+            <div class="card">
+                <div class="icon">💡</div>
+                <h3>Custom AI Solutions</h3>
+                <p>Design and develop bespoke AI systems for both cloud and on-premise deployments.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📈</div>
+                <h3>Data Intelligence</h3>
+                <p>Transform raw data into actionable insights with advanced AI analytics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="technologies">
+        <h2>Our Technologies</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🔄 Retrieval Augmented Generation (RAG)</h3>
+                <p>Advanced AI system that combines retrieval and generation for accurate, contextual responses based on your data.</p>
+            </div>
+            <div class="card">
+                <h3>🔌 Model Control Protocol (MCP)</h3>
+                <p>Cutting-edge technology for seamless integration between AI models and external resources, enhancing functionality and control.</p>
+            </div>
+            <div class="card">
+                <h3>☁️ Cloud & On-Premise Solutions</h3>
+                <p>Flexible deployment options to meet your security requirements and infrastructure needs.</p>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Let's discuss how AI can revolutionize your operations and drive growth.</p>
+        <a href="#contact" class="button">Schedule a Consultation</a>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Get in Touch</h2>
+        <div style="text-align: center;">
+            <p>Email: dennis.yaskevich@proton.me</p>
+            <p>Address: Wladyslawa Reymonta 22b, Kraków, Poland</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Plinsburg Technologies Company.</p>
+    </footer>
+
+    <div class="floating-chat">💬</div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
